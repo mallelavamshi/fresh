@@ -1,0 +1,7 @@
+streamlit
+pandas
+pillow
+openpyxl
+gdown
+requests
+weasyprint
