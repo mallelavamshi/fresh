@@ -66,7 +66,8 @@ def main():
         st.error("Invalid coupon code. Please enter a valid code.")
         return
     
-    folder_path = st.text_input("Enter folder path containing images:")
+    folder_path = st.text_input("Enter folder path containing images:").strip().replace("\\", "/")
+
     if folder_path and os.path.isdir(folder_path):
         if st.button("Process Images"):
             image_files = get_image_files_from_folder(folder_path)
